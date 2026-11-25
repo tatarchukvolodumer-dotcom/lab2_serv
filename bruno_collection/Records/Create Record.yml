@@ -1,0 +1,25 @@
+info:
+  name: Create Record
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/record"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": 2,
+        "category_id": 2,
+        "created_at": "2026-11-25T18:20:00Z",
+        "amount": 250.75
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
